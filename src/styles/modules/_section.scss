@@ -1,0 +1,8 @@
+.section {
+  margin-top: 100px;
+  
+  &__title {
+    color: $h2-option;
+    @extend %h2;
+  }
+}

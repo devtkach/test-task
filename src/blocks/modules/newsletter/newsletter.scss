@@ -1,0 +1,52 @@
+.newsletter {
+  background-color: $dark;
+  box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+
+  & h4 {
+    @extend %h4;
+  }
+
+  & p {
+    @extend %regularText;
+  }
+
+  &__form {
+    gap: 20px;
+
+    & input {
+      padding: 17px 16px;
+      border: 1px solid #bdbdbd;
+      border-radius: 15px;
+
+      &:focus,
+      &:active {
+        border-color: none;
+        color: $light;
+        box-shadow: none;
+        outline: none;
+      }
+      
+      &::placeholder {
+        color: $light;
+        @extend %regularText;
+      }
+    }
+
+    & button {
+      white-space: nowrap;
+    background: $light;
+    border: 2px solid $light;
+    border-radius: 15px;  
+    padding: 17px 44px;
+    color: $dark;
+    line-height: 20px;
+    @extend %regularText;
+
+    &:hover {
+      border: 2px solid $light;
+      color: $light;
+      background: transparent;
+    }
+    }
+  }
+}

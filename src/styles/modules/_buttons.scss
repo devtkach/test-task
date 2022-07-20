@@ -1,0 +1,28 @@
+button {
+  &.btn-outline-light {
+    @extend %mediumText;
+    font-size: 20px;
+    line-height: 27px;
+    border: 2px solid $light;
+    border-radius: 15px;
+    color: $light;
+    padding: 13px 0 16px;
+  }
+  &.btn-brand {
+    background: $brand-color;
+    border-radius: 15px;
+    padding: 14px 60px;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    color: $light;
+    @extend %regularText;
+
+    &:hover {
+      color: $brand-color;
+      background: #fff;
+      border: 2px solid $brand-color;
+      border-radius: 15px;
+    }
+  }
+}
+

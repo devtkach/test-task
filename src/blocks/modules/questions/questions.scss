@@ -1,0 +1,62 @@
+.questions {
+  .accordion {
+    margin-top: 80px;
+    max-width: 820px;
+    &-item {
+      margin-bottom: 1px solid #c4c4c4;
+      &.active {
+        box-shadow: 0px 0px 18px rgba(68, 68, 68, 0.09);
+        border: 0;
+        background: #fff;
+      }
+      &:last-child {
+        margin-bottom: 1px solid #c4c4c4;
+      }
+    }
+
+    &-button {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 23px;
+      color: $dark;
+      padding: 1.5rem 1rem;
+      background-color: transparent;
+      &:focus {
+        border-color: none;
+        box-shadow: none;
+      }
+      &:not(.collapsed) {
+        color: $brand-color;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 23px;
+        box-shadow: none;
+        background-color: #fff;
+        padding: 24px 1rem;
+      }
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0833 4.58332H6.41668V0.916681C6.41668 0.41068 6.00693 0 5.5 0C4.99307 0 4.58332 0.41068 4.58332 0.916681V4.58332H0.916682C0.409757 4.58332 0 4.994 0 5.5C0 6.006 0.409757 6.41668 0.916682 6.41668H4.58332V10.0833C4.58332 10.5893 4.99307 11 5.5 11C6.00693 11 6.41668 10.5893 6.41668 10.0833V6.41668H10.0833C10.5902 6.41668 11 6.006 11 5.5C11 4.994 10.5902 4.58332 10.0833 4.58332Z' fill='black'/%3E%3C/svg%3E%0A");
+        background-size: 11px;
+        width: 11px;
+        height: 11px;
+        transform: rotate(90deg) !important;
+        transition: 0.3s ease-in-out;
+      }
+
+      &:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='2' viewBox='0 0 11 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.41668 0H10.0833C10.5902 0 11 0.448008 11 1C11 1.55199 10.5902 2 10.0833 2H6.41668H4.58332H0.916682C0.409757 2 0 1.55199 0 1C0 0.448008 0.409757 0 0.916682 0H4.58332H6.41668Z' fill='%23DF4E3C'/%3E%3C/svg%3E%0A");
+        transform: rotate(180deg) !important;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    &-body {
+      padding: 0 1.25rem;
+      font-size: 13px;
+      line-height: 20px;
+      color: $dark;
+      padding: 0 24px 24px 16px;
+    }
+  }
+}

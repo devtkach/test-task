@@ -1,0 +1,26 @@
+// From PX to Rem
+
+// @mixin toRem($property, $value) {
+//   #{$property}: ($value / 16) + rem;
+// }
+
+// Responsive
+@mixin onTablet {
+  @media (min-width:768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width:1280px) {
+    @content;
+  }
+}
+
+//  not last child
+
+@mixin not-last-child($selector) {
+  & #{$selector}:not(:last-child) {
+    @content;
+  }
+}
